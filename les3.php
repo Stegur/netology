@@ -13,7 +13,7 @@
 ////var_dump($x >= 1)
 
 //$b = 7;
-
+//
 //switch ($b){
 //    case 5:
 //        echo "$b";
@@ -28,25 +28,33 @@
 //        break;
 //}
 
-$var = 5;
-$action = "+";
+//$var = 5;
+//$action = "+";
+//
+//switch ($action){
+//    case "print":
+//        echo "$var";
+//        break;
+//
+//    case "+":
+//        $var++;
+//        echo "$var";
+//        break;
+//
+//    case "-":
+//        $var--;
+//        echo "$var";
+//        break;
+//
+//    default:
+//        echo "default";
+//}
 
-switch ($action){
-    case "print":
-        echo "$var";
-        break;
-
-    case "+":
-        $var++;
-        echo "$var";
-        break;
-
-    case "-":
-        $var--;
-        echo "$var";
-        break;
-
-    default:
-        echo "default";
+$x = 1;
+while ($x < 5){
+    echo $x . "<br/>";
+    $x++;
 }
+
+echo $x."<br/>";
 ?>
