@@ -58,12 +58,17 @@
 //
 //echo $x."<br/>";
 
-$x = 1;
-do {
-    echo $x."<br/>";
-    $x++;
-}while($x < 5);
-echo $x;
+//$x = 1;
+//do {
+//    echo $x."<br/>";
+//    $x++;
+//}while($x < 5);
+//echo $x;
+
+for ($i = 0; $i < 10; $i++){
+    echo $i."<br/>";
+}
+
 ?>
 
 <!--<select name="" id="">-->
