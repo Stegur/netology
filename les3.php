@@ -50,11 +50,26 @@
 //        echo "default";
 //}
 
-$x = 1;
-while ($x < 5){
-    echo $x . "<br/>";
-    $x++;
-}
+//$x = 1;
+//while ($x < 5){
+//    echo $x . "<br/>";
+//    $x++;
+//}
+//
+//echo $x."<br/>";
 
-echo $x."<br/>";
+$x = 1;
+do {
+    echo $x."<br/>";
+    $x++;
+}while($x < 5);
+echo $x;
 ?>
+
+<!--<select name="" id="">-->
+<!--    <option value="">Выберите...</option>-->
+<!--    <option value="">1</option>-->
+<!--    <option value="">2</option>-->
+<!--    <option value="">3</option>-->
+<!--    <option value="">5</option>-->
+<!--</select>-->
