@@ -69,19 +69,44 @@
 //    echo $i."<br/>";
 //}
 
-$myArr = array(
-    "a",
-    "b",
-    "c",
-    "d"
-);
-
+//$myArr = array(
+//    "a",
+//    "b",
+//    "c",
+//    "d"
+//);
+//
+//echo "<pre>";print_r($myArr);echo "</pre>";
+//
+//foreach ($myArr as &$elem){
+//    $elem = 1;
+//}
 //echo "<pre>";print_r($myArr);echo "</pre>";
 
-foreach ($myArr as $key=>$elem){
-    echo $key." - ".$elem."<br>";
+//for ($i = 0; $i < 5; $i++){
+//    if ($i == 2)
+//        //break;
+//        continue;
+//
+//    echo $i."<br>";
+//}
+
+$i = 0;
+while (true){
+    switch ($i){
+        case 5:
+            echo "Итерация 5<br/>";
+            //Выходим из Switch
+            break 1;
+        case 10:
+            echo "Итерация 10<br/>";
+            //Выходим из While
+            break 2;
+        default:
+            break;
+    }
+    $i++;
 }
-//echo "<pre>";print_r($myArr);echo "</pre>";
 ?>
 
 <!--<select name="" id="">-->
