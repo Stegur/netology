@@ -65,10 +65,23 @@
 //}while($x < 5);
 //echo $x;
 
-for ($i = 0; $i < 10; $i++){
-    echo $i."<br/>";
-}
+//for ($i = 0; $i < 10; $i++){
+//    echo $i."<br/>";
+//}
 
+$myArr = array(
+    "a",
+    "b",
+    "c",
+    "d"
+);
+
+//echo "<pre>";print_r($myArr);echo "</pre>";
+
+foreach ($myArr as $key=>$elem){
+    echo $key." - ".$elem."<br>";
+}
+//echo "<pre>";print_r($myArr);echo "</pre>";
 ?>
 
 <!--<select name="" id="">-->
