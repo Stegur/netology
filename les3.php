@@ -12,19 +12,41 @@
 //
 ////var_dump($x >= 1)
 
-$b = 7;
+//$b = 7;
 
-switch ($b){
-    case 5:
-        echo "$b";
+//switch ($b){
+//    case 5:
+//        echo "$b";
+//        break;
+//
+//    case 1:
+//        echo "1-2";
+//        break;
+//
+//    default:
+//        echo "default";
+//        break;
+//}
+
+$var = 5;
+$action = "+";
+
+switch ($action){
+    case "print":
+        echo "$var";
         break;
 
-    case 1:
-        echo "1-2";
+    case "+":
+        $var++;
+        echo "$var";
+        break;
+
+    case "-":
+        $var--;
+        echo "$var";
         break;
 
     default:
         echo "default";
-        break;
 }
 ?>
