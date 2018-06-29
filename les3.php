@@ -91,22 +91,30 @@
 //    echo $i."<br>";
 //}
 
-$i = 0;
-while (true){
-    switch ($i){
-        case 5:
-            echo "Итерация 5<br/>";
-            //Выходим из Switch
-            break 1;
-        case 10:
-            echo "Итерация 10<br/>";
-            //Выходим из While
-            break 2;
-        default:
-            break;
-    }
-    $i++;
+//$i = 0;
+//while (true){
+//    switch ($i){
+//        case 5:
+//            echo "Итерация 5<br/>";
+//            //Выходим из Switch
+//            break 1;
+//        case 10:
+//            echo "Итерация 10<br/>";
+//            //Выходим из While
+//            break 2;
+//        default:
+//            break;
+//    }
+//    $i++;
+//}
+
+function myFunc($x){
+    echo $x."<br>";
+    return $x;
 }
+
+$a = 5;
+var_dump(myFunc($a));
 ?>
 
 <!--<select name="" id="">-->
