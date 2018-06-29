@@ -108,13 +108,34 @@
 //    $i++;
 //}
 
-function myFunc($x){
-    echo $x."<br>";
-    return $x;
-}
+//function myFunc($x){
+//    echo $x."<br>";
+//    return $x;
+//}
+//
+//$a = 5;
+//var_dump(myFunc($a));
 
-$a = 5;
-var_dump(myFunc($a));
+$test = "123";
+
+function example1(){
+    // secret fix
+    GLOBAL $test;
+    $test = "hello";
+}
+echo $test."<br/>";
+example1();
+echo $test."<br/>";
+
+function example2(){
+    static $x=0;
+    echo $x."<br/>";
+    $x++;
+}
+example2();
+example2();
+example2();
+example2();
 ?>
 
 <!--<select name="" id="">-->
