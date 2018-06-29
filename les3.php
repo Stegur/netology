@@ -116,26 +116,69 @@
 //$a = 5;
 //var_dump(myFunc($a));
 
-$test = "123";
+//$test = "123";
+//
+//function example1(){
+//    // secret fix
+//    GLOBAL $test;
+//    $test = "hello";
+//}
+//echo $test."<br/>";
+//example1();
+//echo $test."<br/>";
+//
+//function example2(){
+//    static $x=0;
+//    echo $x."<br/>";
+//    $x++;
+//}
+//example2();
+//example2();
+//example2();
+//example2();
 
-function example1(){
-    // secret fix
-    GLOBAL $test;
-    $test = "hello";
-}
-echo $test."<br/>";
-example1();
-echo $test."<br/>";
+$myArr = array(
+        "Раздел 1" => array(
+                "Подраздел 1" => false,
+                "Подраздел 2" => false,
+                "Подраздел 3" => false,
+                "Подраздел 4" => false,
+                "Подраздел 5" => false,
+                "Подраздел 6" => false,
+        ),
+        "Раздел 2" => array(
+                "Подраздел 1" => false,
+                "Подраздел 2" => false,
+                "Подраздел 3" => false,
+        ),
+        "Раздел 3" => array(
+            "Подраздел 1" => array(
+                    "Файл 1",
+                    "Файл 2",
+                    "Файл 3"
+            ),
+            "Подраздел 2" => false,
+            "Подраздел 3" => false,
+        )
+);
+//echo "<pre>";print_r($myArr);echo "</pre>";
+function func_rec($arr){
+    echo "<ul>";
 
-function example2(){
-    static $x=0;
-    echo $x."<br/>";
-    $x++;
+    foreach ($arr as $key => $elem){
+        echo "<li>" . $key;
+        if (is_array($elem)){
+            func_rec($elem);
+        }elseif ($elem){
+            echo " - " . $elem;
+        }else {
+            echo " - Пусто";
+        }
+        echo "</li>";
+    }
+    echo "</ul>";
 }
-example2();
-example2();
-example2();
-example2();
+func_rec($myArr);
 ?>
 
 <!--<select name="" id="">-->
