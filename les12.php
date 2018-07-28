@@ -18,23 +18,36 @@
 //echo $test->private;
 //$test->some = 20;
 
-class TestClass
+//class TestClass
+//{
+//    private $data = [];
+//    public function __set($name, $value)
+//    {
+//        $this->data[$name] = $value;
+//    }
+//
+//    public function __get($name)
+//    {
+//        if (isset($this->data[$name]))
+//            return $this->data[$name];
+//    }
+//}
+//
+//$test = new TestClass();
+//$test->lalal = 5;
+//echo '<pre>';
+//var_dump($test);
+//echo $test->lalal;
+
+class Test
 {
-    private $data = [];
-    public function __set($name, $value)
+    public function __call($name, $arguments)
     {
-        $this->data[$name] = $value;
-    }
-    
-    public function __get($name)
-    {
-        if (isset($this->data[$name]))
-            return $this->data[$name];
+        echo "Вызван метод - " . $name . ' с параметрами:';
+        echo '<pre>';
+        var_dump($arguments);
     }
 }
 
-$test = new TestClass();
-$test->lalal = 5;
-echo '<pre>';
-var_dump($test);
-echo $test->lalal;
+$test = new Test();
+$test->someMethod(132, dfs, 78);
