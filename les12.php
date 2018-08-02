@@ -39,15 +39,43 @@
 //var_dump($test);
 //echo $test->lalal;
 
-class Test
+//class Test
+//{
+//    public function __call($name, $arguments)
+//    {
+//        echo "Вызван метод - " . $name . ' с параметрами:';
+//        echo '<pre>';
+//        var_dump($arguments);
+//    }
+//}
+//
+//$test = new Test();
+//$test->someMethod(132, dfs, 78);
+
+
+
+function myAutoload($className)
 {
-    public function __call($name, $arguments)
-    {
-        echo "Вызван метод - " . $name . ' с параметрами:';
-        echo '<pre>';
-        var_dump($arguments);
+    $filePath = './classes/' . $className . '.class.php';
+    if (file_exists($filePath)) {
+        include "$filePath";
     }
 }
 
-$test = new Test();
-$test->someMethod(132, dfs, 78);
+
+function coreAutoload($className)
+{
+    $filePath = './core/' . $className . '.class.php';
+    if (file_exists($filePath)) {
+        include "$filePath";
+    }
+}
+
+
+spl_autoload_register('myAutoload');
+spl_autoload_register('coreAutoload');
+
+$test = new TestClass;
+
+
+
