@@ -53,29 +53,39 @@
 //$test->someMethod(132, dfs, 78);
 
 
+//
+//function myAutoload($className)
+//{
+//    $filePath = './classes/' . $className . '.class.php';
+//    if (file_exists($filePath)) {
+//        include "$filePath";
+//    }
+//}
+//
+//
+//function coreAutoload($className)
+//{
+//    $filePath = './core/' . $className . '.class.php';
+//    if (file_exists($filePath)) {
+//        include "$filePath";
+//    }
+//}
+//
+//
+//spl_autoload_register('myAutoload');
+//spl_autoload_register('coreAutoload');
+//
+//$test = new TestClass;
 
-function myAutoload($className)
+
+function myAutoload($classNameWithNamespase)
 {
-    $filePath = './classes/' . $className . '.class.php';
+    $filePath = $_SERVER['DOCUMENT_ROOT']
+    . str_replace('\\', DIRECTORY_SEPARATOR, $classNameWithNamespase)
+    . '.php';
     if (file_exists($filePath)) {
         include "$filePath";
     }
 }
-
-
-function coreAutoload($className)
-{
-    $filePath = './core/' . $className . '.class.php';
-    if (file_exists($filePath)) {
-        include "$filePath";
-    }
-}
-
-
-spl_autoload_register('myAutoload');
-spl_autoload_register('coreAutoload');
-
-$test = new TestClass;
-
 
 
